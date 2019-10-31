@@ -136,7 +136,7 @@ function getLastCarInfo(arr) {
 */
 function getCarInfoById(arr, id) {
 	for (let i = 0; i < arr.length; i++) {
-		if (arr[i].id == id) {
+		if (arr[i].id === id) {
 			let car = arr[i];
 			return `This ia a ${car.car_make} ${car.car_model}`;
 		}
@@ -151,8 +151,11 @@ function getCarInfoById(arr, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-	/* code here */
+function sortCarInventory(arr) {
+	const carOrder = arr;
+	carOrder.sort((x, y) => {
+		return x.car_model - y.car_model;
+	});
 }
 
 /**
