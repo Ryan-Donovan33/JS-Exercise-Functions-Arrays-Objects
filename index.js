@@ -153,8 +153,10 @@ function getCarInfoById(arr, id) {
 */
 function sortCarInventory(arr) {
 	const carOrder = arr;
-	carOrder.sort((x, y) => {
-		return x.car_model - y.car_model;
+	return carOrder.sort((x, y) => {
+		if (x.car_model < y.car_model) {
+			return -1;
+		}
 	});
 }
 
