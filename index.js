@@ -136,8 +136,8 @@ function getLastCarInfo(arr) {
 */
 function getCarInfoById(arr, index) {
 	const car = arr;
-	const carID = car[index[0]];
-	return `This is a ${carID.car_make} ${carID.car_model}`;
+	const carInfo = car[index[1]];
+	return `This is a ${carInfo.car_make} ${carInfo.car_model}`;
 }
 
 /**
