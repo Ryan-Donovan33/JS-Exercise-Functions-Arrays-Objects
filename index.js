@@ -191,8 +191,13 @@ function getModelYears(year) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-	/* code here */
+function getOlderCars(arr, index) {
+	const maxYear = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].index > index) {
+			let carYear = arr[i];
+		}
+	}
 }
 
 /**
@@ -206,10 +211,21 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-	/* code here */
-}
+function getGermanCars(arr) {
+	const germanCars = [];
 
+	for (let i = 0; i < arr.length; i++) {
+		if (
+			arr[i].car_make === 'Audi' ||
+			arr[i].car_make === 'Mercedes-Benz' ||
+			arr[i].car_make === 'Volkswagen' ||
+			arr[i].car_make === 'BMW'
+		) {
+			germanCars.push(arr[i]);
+		}
+	}
+	return germanCars;
+}
 /**
  * ### Challenge refactor to arrow functions
  * 
