@@ -169,9 +169,11 @@ function sortCarInventory(arr) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(year) {
+
+// 1. want to put all years from the inventory data in a new array
+
+function getModelYears(inventory) {
 	const carYear = [];
-	const inventory = year;
 	for (let i = 0; i < inventory.length; i++) {
 		let currentCar = inventory[i];
 		carYear.push(currentCar.car_year);
@@ -193,11 +195,7 @@ function getModelYears(year) {
 */
 function getOlderCars(arr, index) {
 	const maxYear = [];
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i].index > index) {
-			let carYear = arr[i];
-		}
-	}
+	for (let i = 0; i < arr.length; i++) {}
 }
 
 /**
@@ -246,7 +244,7 @@ function getGermanCars(arr) {
 */
 const sum = (a, b) => a + b;
 const addFive = (num) => num + 5;
-const argTimesTwo = null; // code here!
+const argTimesTwo = (num) => num * 2; // code here!
 
 /**
  * ### Challenge `carMaker`
