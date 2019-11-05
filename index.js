@@ -195,7 +195,11 @@ function getModelYears(inventory) {
 */
 function getOlderCars(arr, index) {
 	const maxYear = [];
-	for (let i = 0; i < arr.length; i++) {}
+	for (let i = 0; i < arr.length; i++) {
+		let currentYear = index[i].car_year;
+		maxYear.push(currentYear);
+	}
+	return maxYear;
 }
 
 /**
